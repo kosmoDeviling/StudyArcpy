@@ -14,6 +14,7 @@ ptGeom2 = arcpy.PointGeometry(pt2, srWGS84)
 ptGeom3 = arcpy.PointGeometry(pt3, srWGS84)
 
 # Create new Point Feature 
+arcpy.CopyFeatures_management(ptGeom1, "PtSingleGeom")
 arcpy.CopyFeatures_management([ptGeom1, ptGeom2, ptGeom3], "PtGeom")
 
 # Create lit of coords
